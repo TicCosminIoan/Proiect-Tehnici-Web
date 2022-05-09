@@ -1,0 +1,60 @@
+header
+{
+    background-color: #18043b;
+    color: #ffffff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+header a
+{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1em;
+
+}
+
+header a:hover
+{
+    color: #cc4be6;
+    text-decoration: underline;
+}
+
+header h1
+{
+    text-align: center ;
+    width: 100%;
+    font-size: 4em;
+    
+}
+header nav
+{
+    text-align: center;
+}
+
+body,html
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+section
+{
+    width: 1240px;
+    margin: 0 auto;
+
+}
+
+.game-listing
+{
+    display: flex;
+    
+}
+
+.game-listing > div
+{
+    margin: 1em;
+}
