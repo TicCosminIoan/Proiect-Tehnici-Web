@@ -1,0 +1,41 @@
+<%- include('_header.ejs', {}); %>
+
+<section>
+
+    <h1>
+        Add a game
+    </h1>
+
+    <form action="/add_a_game" method="post" id="create_game_form">
+        <div>
+        <label for="name">Game name:</label><br>
+        <input type="text" id="name" name="name" value="" required ><br>
+        <span class="error_message"></span>
+
+        </div>
+        <div>
+        <label for="developer">Developer:</label><br>
+        <input type="text" id="developer" name="developer" value="" required ><br>
+        <span class="error_message"></span>
+        </div>
+
+        
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category" value="" required ><br>
+        <label for="artwork">Artwork:</label><br>
+        <input type="text" id="artwork" name="artwork" value="" required ><br>
+        <label for="site_link">Official site link:</label><br>
+        <input type="text" id="site_link" name="site_link" value="" required ><br>
+        <label for="gameplay_link">Gameplay link:</label><br>
+        <input type="text" id="gameplay_link" name="gameplay_link" value="" required ><br>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+
+ 
+
+</section>
+
+
+<%- include('_footer.ejs', {}); %>
