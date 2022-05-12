@@ -9,6 +9,7 @@ let people = ['geddy', 'neil', 'alex'];
 
 app.use("/static",express.static("static"))
 app.use(express.urlencoded({extended:true}))
+  
 app.get('/', async(req, res) => {   
     
     ejs.renderFile("./template/index.ejs", [], {}, function(err, str){
@@ -18,6 +19,7 @@ app.get('/', async(req, res) => {
     
  
 })
+
 
 app.get('/add_a_game', async(req, res) => {   
     
