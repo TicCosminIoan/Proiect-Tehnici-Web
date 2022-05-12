@@ -11,7 +11,6 @@ function validate_url(str)
     }
 }
 
-
 $(function()
 {
     $("#create_game_form").submit(function(e){
@@ -19,12 +18,34 @@ $(function()
         var has_error=false;
         $(".error_message").remove()
 
-        if($("#name").val())
+        if(!$("#name").val())
         {
                 has_error=true;
                 $("#name").parent().append($(`<span class="error_message"></span>`).html("Required field."))
 
         }
+
+        if(!$("#developer").val())
+        {
+                has_error=true;
+                $("#developer").parent().append($(`<span class="error_message"></span>`).html("Required field."))
+
+        }
+
+        if(!$("#artwork").val())
+        {
+                has_error=true;
+                $("#artwork").parent().append($(`<span class="error_message"></span>`).html("Required field."))
+
+        }
+
+        if(!$("#category").val())
+        {
+                has_error=true;
+                $("#category").parent().append($(`<span class="error_message"></span>`).html("Required field."))
+
+        }
+
 
         if(!validate_url($("#site_link").val()))
         {
@@ -46,7 +67,7 @@ $(function()
                 $("#artwork").parent().append($(`<span class="error_message"></span>`).html("This field requires a link."))
 
         }
-
+ 
 
         if(!has_error)
         {
@@ -59,3 +80,15 @@ $(function()
 }
 
 )
+
+function myFunc()
+{
+if(!$("#name").val() || !$("#developer").val() || !$("#artwork").val() || !$("#category").val() || !validate_url($("#site_link").val()) || 
+!validate_url($("#gameplay_link").val()) || !validate_url($("#artwork").val()) )
+{
+    
+    alert("Sorry. Something went wrong.");
+}
+else alert("Your game was successfully added.");
+
+}

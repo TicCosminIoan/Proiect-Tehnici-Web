@@ -1,37 +1,58 @@
 <%- include('_header.ejs', {}); %>
 
 <section>
-
+    <div class="container2">
     <h1>
         Add a game
     </h1>
 
     <form action="/add_a_game" method="post" id="create_game_form">
-        <div>
-        <label for="name">Game name:</label><br>
-        <input type="text" id="name" name="name" value="" required ><br>
+
+        
+        <div class="input1">
+        <label for="name">Game name:</label>
+        <input type="text" id="name" name="name" value="" required >
         <span class="error_message"></span>
 
         </div>
-        <div>
-        <label for="developer">Developer:</label><br>
-        <input type="text" id="developer" name="developer" value="" required ><br>
+        <div class="input1">
+        <label for="developer">Developer:</label>
+        <input type="text" id="developer" name="developer" value="" required >
         <span class="error_message"></span>
         </div>
 
-        
-        <label for="category">Category:</label><br>
-        <input type="text" id="category" name="category" value="" required ><br>
-        <label for="artwork">Artwork:</label><br>
-        <input type="text" id="artwork" name="artwork" value="" required ><br>
-        <label for="site_link">Official site link:</label><br>
-        <input type="text" id="site_link" name="site_link" value="" required ><br>
-        <label for="gameplay_link">Gameplay link:</label><br>
-        <input type="text" id="gameplay_link" name="gameplay_link" value="" required ><br>
-        
-        <button type="submit">Submit</button>
+        <div class="input1">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="" required >
+        <span class="error_message"></span>
+        </div>
 
+
+        <div class="input1">
+        <label for="artwork">Artwork:</label>
+        <input type="text" id="artwork" name="artwork" value="" required >
+        <span class="error_message"></span>
+        </div>
+
+        <div class="input1">
+        <label for="site_link">Official site link:</label>
+        <input type="text" id="site_link" name="site_link" value="" required >
+        <span class="error_message"></span>
+        </div>
+
+        <div class="input1">
+        <label for="gameplay_link">Gameplay link:</label>
+        <input type="text" id="gameplay_link" name="gameplay_link" value="" required >
+        <span class="error_message"></span>
+        </div>
+
+        <div class="button">
+        <button type="submit" onclick="myFunc()">Submit</button>
+
+        </div>
     </form>
+
+</div>
 
  
 

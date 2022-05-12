@@ -1,18 +1,25 @@
 <%- include('_header.ejs', {}); %>
 
 <section>
-
+    <div class="container2">
     <h1>
         Add a category
     </h1>
 
     <form>
-
-        <label for="category">Category:</label><br>
-        <input type="text" id="category" name="category" value="" required ><br>
-
+        
+            <div class="input1">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" value="" required >
+                <span class="error_message"></span>
+                 
+        </div>
+        <div class="button">
         <button type="submit">Submit</button>
+        </div>
     </form>
+
+</div>
 
  
 
