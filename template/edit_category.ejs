@@ -3,10 +3,10 @@
 <section class="grid">
     <div class="container2">
         <h1>
-            Create category
+            Edit category
         </h1>
 
-        <form action="/add_a_category" method="post">
+        <form action="/category/edit/<%=values.id%>" method="post">
 
             <%- include('_category_form.ejs', { values }); %>
         </form>

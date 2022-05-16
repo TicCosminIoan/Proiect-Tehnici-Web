@@ -1,41 +1,41 @@
 <%- include('_header.ejs', {}); %>
 
-
-
 <section>
 
     <h1>
         Games
-    </h1>  
+    </h1>
 
-    <div class="game-listing">
+    <div class="listing">
 
         <% products.forEach(function(product){ %>
 
-
-            <div class="container">
+            <div>
                 <a href="<%= product.url_site %>" target="_blank">
                     <div class="mouseover">
-                    <img src="<%= product.image %>" alt="<%= product.name %>" class="image" style="width:100%"/>
-                    <div class="middle">
-                        <div class="text">Click me</div>
-                      </div>
+                        <img src="<%= product.image %>" alt="<%= product.name %>" class="image" style="width:100%"/>
+                        <div class="middle">
+                            <div class="text">Visit site</div>
+                        </div>
                     </div>
                 </a>
+
                 <h4>
-                    
                     <%= product.name %>
                 </h4>
+
                 <div>Dev: <b><%= product.developer %></b> <br>
-                     Category: <b><%= product.category %></b></div>  
+                    Category: <b><%= product.category %></b></div>
                 <h4>
-                    <a href="<%= product.url_video %>" target="_blank"> Gameplay </a> 
+                    <a href="<%= product.url_video %>" target="_blank"> Gameplay </a>
                 </h4>
-            
-             </div>
-             <% } ) %>
 
-
+                <% if (singedIn) { %>
+                    <a href="/games/edit/<%= product.id %>" class="button">EDIT </a> /
+                    <a href="/games/delete/<%= product.id %>" class="delete button"> DELETE </a>
+                <% } %>
+            </div>
+        <% } ) %>
 
     </div>
 

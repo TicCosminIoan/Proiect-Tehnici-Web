@@ -1,0 +1,39 @@
+
+<div class="input1">
+    <label for="name">Game name:</label>
+    <input type="text" id="name" name="name" value="<%=values.name%>">
+</div>
+<div class="input1">
+    <label for="developer">Developer:</label>
+    <input type="text" id="developer" name="developer" value="<%=values.developer%>">
+</div>
+
+<div class="input1">
+    <label for="category">Category:</label>
+    <select id="category" name="category">
+        <option value="">Select category</option>
+        <% categories.forEach((category) => { %>
+            <option value="<%= category.id %>" <% if(values.category===category.id) { %>selected<% } %>><%= category.name %></option>
+        <% }) %>
+    </select>
+</div>
+
+
+<div class="input1">
+    <label for="image">Artwork:</label>
+    <input type="text" id="image" name="image" value="<%=values.image%>">
+</div>
+
+<div class="input1">
+    <label for="url_site">Official site link:</label>
+    <input type="url" id="url_site" name="url_site" value="<%=values.url_site%>">
+</div>
+
+<div class="input1">
+    <label for="url_video">Gameplay link:</label>
+    <input type="url" id="url_video" name="url_video" value="<%=values.url_video%>">
+</div>
+
+<div class="input1">
+    <button type="submit" class="button">Submit</button>
+</div>

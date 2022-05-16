@@ -1,0 +1,42 @@
+<%- include('_header.ejs', {}); %>
+
+<section class="grid">
+    <div class="container2">
+        <h1>
+            Login
+        </h1>
+
+        <% if (hasError) { %>
+            <div class="error">
+                Invalid username or password
+            </div>
+        <% } %>
+
+        <form action="/login" method="post">
+
+            <div class="input1">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="" required>
+            </div>
+            <div class="input1">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="" required>
+            </div>
+            <div class="input1">
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="textA">
+        <div class="rotation">
+            Let the games begin
+        </div>
+    </div>
+
+
+</section>
+
+
+<%- include('_footer.ejs', {}); %>

@@ -3,16 +3,17 @@
 <section class="grid">
     <div class="container2">
         <h1>
-            Create category
+            Edit game
         </h1>
 
-        <form action="/add_a_category" method="post">
+        <form action="/games/edit/<%=values.id%>" method="post" id="create_game_form">
 
-            <%- include('_category_form.ejs', { values }); %>
+            <%- include('_game_form.ejs', { values }); %>
+
         </form>
 
-    </div>
 
+    </div>
     <div class="textA">
         <div class="rotation">
             Let the games begin

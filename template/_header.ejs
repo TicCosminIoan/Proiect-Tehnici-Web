@@ -13,21 +13,33 @@
 <title>MultiGames</title>
 </head>
 <body style="background-color: rgb(241, 241, 241);">
- 
+
 <header>
 
     <h1>
         MultiGames
 
     </h1>
-    
+
     <nav>
 
         <a href="/games">All games</a>
-        <a href="">Categories</a>
-        <a href="/add_a_game">Add a game</a>
-        <a href="/add_a_category">Add a category</a>
-        
+        <div class="dropdown">
+            <a href="/categories">Categories</a>
+            <div class="panel">
+                <% categories.forEach((category) => { %>
+                    <a href="/games/<%= category.id %>"><%= category.name %></a>
+                <% }) %>
+            </div>
+        </div>
+
+        <% if (singedIn) { %>
+            <a href="/add_a_game">Add a game</a>
+            <a href="/add_a_category">Add a category</a>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Login</a>
+        <% } %>
     </nav>
 
 

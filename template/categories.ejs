@@ -1,0 +1,39 @@
+<%- include('_header.ejs', {}); %>
+
+<section>
+
+    <h1>
+        Categories
+    </h1>
+
+    <div class="listing categories">
+
+        <% categories.forEach(function(category){ %>
+
+            <div>
+                <a href="/games/<%= category.id %>">
+                    <div class="mouseover">
+                        <img src="<%= category.image %>" alt="<%= category.name %>" class="image" />
+                        <div class="middle">
+                            <div class="text">View games</div>
+                        </div>
+                    </div>
+                </a>
+
+                <h4>
+                    <%= category.name %>
+                </h4>
+
+                <% if (singedIn) { %>
+                    <a href="/category/edit/<%= category.id %>" class="button">EDIT</a> /
+                    <a href="/category/delete/<%= category.id %>" class="delete button">DELETE</a>
+                <% } %>
+            </div>
+        <% } ) %>
+
+    </div>
+
+</section>
+
+
+<%- include('_footer.ejs', {}); %>
